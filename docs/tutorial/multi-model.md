@@ -36,6 +36,9 @@ class Two(Document):
 
     class Settings:
         union_doc = Parent
+        
+# Include UnionDoc & Documents in document_models:
+await init_beanie(database=client.db_name, document_models=[Parent, One, Two]
 ```
 
 The schemas could be incompatible.
